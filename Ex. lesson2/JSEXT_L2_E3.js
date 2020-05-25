@@ -186,10 +186,8 @@ function eRegistration(ticket, fullName, nowTime) {
   //получаем новый массив из номера рейса//
   let flight = flights[flightName];
   //проверяем что купленный билет есть в массиве всех проданных билетов и что имя пассажира совпадает//
-  let customerTicket = flight.tickets.find(function (boughtTicket) {
-    if (boughtTicket.id === ticket && boughtTicket.fullName === fullName) {
-      return boughtTicket;
-    }
+  let customerTicket = flight.tickets.find((boughtTicket) => {
+    boughtTicket.id === ticket && boughtTicket.fullName === fullName;
   });
 
   if (!customerTicket) {
