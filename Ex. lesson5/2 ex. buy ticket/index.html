@@ -15,12 +15,34 @@
   <body>
     <div id="buy-ticket">
       <h2>Зaполните форму для покупки билета</h2>
-      <form id="buy-ticket-form">
-        <p><input name="flight" placeholder="Укажите код рейса" /></p>
+      <form action="" onsubmit="return validate();" id="buy-ticket-form">
+        <p>
+          <input
+            id="flightId"
+            type="text"
+            name="flight"
+            placeholder="Укажите код рейса"
+          />
+        </p>
         <p>Тип места:</p>
-        <p><input name="type" type="radio" value="0" checked /> Стандарт</p>
-        <p><input name="type" type="radio" value="1" /> Бизнес</p>
-        <p><input name="fullname" placeholder="Введите имя покупателя" /></p>
+        <p>
+          <input id="radio1" name="type" type="radio" value="0" checked /><label
+            for="radio1"
+          >
+            Стандарт</label
+          >
+        </p>
+        <p>
+          <input id="radio2" name="type" type="radio" value="1" />
+          <label for="radio2"> Бизнеc</label>
+        </p>
+        <p>
+          <input
+            id="userName"
+            name="fullname"
+            placeholder="Введите имя покупателя"
+          />
+        </p>
         <p>
           <button class="btn btn-secondary btn-sm" type="submit">
             Купить билет
