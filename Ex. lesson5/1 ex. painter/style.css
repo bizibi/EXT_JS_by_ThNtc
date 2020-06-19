@@ -1,0 +1,56 @@
+ h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 250px;
+  color: chartreuse;
+}
+
+
+
+table {
+  display: block;
+  margin: 20px auto;
+}
+
+table tr td {
+  width: 10px;
+  height: 10px;
+  border: 1px solid gray;
+  font-size: 8px;
+  text-align: center;
+}
+#red {
+  background-color: red;
+}
+#orange {
+  background-color: orange;
+}
+#yellow {
+  background-color: yellow;
+}
+#green {
+    background-color: green;
+}
+#lightblue {
+    background-color: lightblue;
+}
+#blue {
+  background-color: blue;
+}
+#violet {
+    background-color: violet;
+}
+}
+#white {
+  background-color: white;
+}
+#black {
+  background-color: black;
+  color: white;
+}
+#yellow {
+  background-color: yellow;
+}
+#orange {
+  background-color: orange;
+}
+
