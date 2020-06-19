@@ -40,3 +40,20 @@ function timeStamp(flightName) {
     return Date();
   }
 }
+
+function validate() {
+  let flightId = document.querySelector("#flightId");
+  let userName = document.querySelector("#userName");
+
+  if (!flightId.value) {
+    flightId.style.border = "2px solid red";
+    alert("Не введен номер рейса!!");
+    return false;
+  }
+  if (!userName.value) {
+    userName.style.border = "2px solid red";
+    alert("Не введено имя!!");
+    return false;
+  }
+  return true;
+}

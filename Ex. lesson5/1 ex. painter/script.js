@@ -14,25 +14,25 @@ function createEditArea(editorAreaHeight = 50, editorAreaWidth = 70) {
 }
 
 function painting() {
-  let palette = document.querySelector("#palette");
-  let editorArea = document.querySelector("#editorArea");
+  const palette = document.querySelector("#palette");
+  const editorArea = document.querySelector("#editorArea");
 
-  editorArea.addEventListener("click", click);
-  palette.addEventListener("click", selectColor);
+  editorArea.addEventListener("click", handleClick);
+  palette.addEventListener("click", currentColor);
 
-  function selectColor(event) {
+  function currentColor(event) {
     if (event.target.tagName !== "TD") return;
-    let defaultColor = document.getElementById(palette.dataset.color);
+    const defaultColor = document.getElementById(palette.dataset.color);
     defaultColor.innerText = "";
     event.target.innerText = "@";
     palette.dataset.color = event.target.id;
   }
 
-  function click(event) {
-    let selectColor = palette.dataset.color;
+  function handleClick(event) {
+    let currentColor = palette.dataset.color;
     if (event.target.tagName !== "TD") return;
 
-    event.target.style.backgroundColor = selectColor;
+    event.target.style.backgroundColor = currentColor;
   }
 }
 document.addEventListener("DOMContentLoaded", createEditArea());
